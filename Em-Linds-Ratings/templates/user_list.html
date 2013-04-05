@@ -1,0 +1,23 @@
+<html>
+<head>
+	<link rel="stylesheet" href="/static/css/bootstrap.css" type = "text/css">
+	<script type="text/javascript" src="/static/js/sortable.js"></script>
+	<title>THIS IS SOME MOTHAFUCKIN' MOVIE RATINGS, YO.</title>
+	</head>
+	<body>
+<table class = "table sortable" id="sortabletable">
+	<tr>
+		<td>User ID</td>
+		<td>Age</td>
+		<td>Number of ratings</td>
+	</tr>
+	{% for user in users %}
+	<tr>
+		<td>{{ user.id }}</td>
+		<td>{{ user.age }}</td>
+		<td>{{ user.ratings|length }}</td>
+	</tr>
+	{% endfor %}
+<!-- <h2>There are {{ users|length }} users.</h2> -->
+	</body>
+</html>
