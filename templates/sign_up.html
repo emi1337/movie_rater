@@ -42,16 +42,19 @@
    
     <div class="container">
       <form class = "form-signin" method="POST" action = "/new_user"> 
+        
         <h2 class="form-signin-heading">Make up your email and password!</h2>
         {% if error %}
           <p class="error"><strong>Error:</strong> {{ error }}
         {% endif %}<br><br>
+        
         <input type="text" class="input-block-level" placeholder="Email address" name = "email">
         <input type="password" class="input-block-level" placeholder="Password" name = "password">
         <input type="text" class="input-block-level" placeholder="Occupation" name = "occupation">
         <input type="text" class="input-block-level" placeholder="Optional: age" name = "age">
         <input type="text" class="input-block-level" placeholder="Optional: gender" name = "gender">
         <input type="text" class="input-block-level" placeholder="Optional: zipcode" name = "zipcode">
+        
         <button class="btn btn-large btn-primary" type="submit">Sign up</button>
       </form>
 

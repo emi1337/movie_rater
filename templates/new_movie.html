@@ -41,18 +41,19 @@
 
    
     <div class="container">
-      <form class = "form-signin" method="POST" action = "/new_user"> 
+      <form class = "form-signin" method="POST" action = "/add_movie"> 
+        <h4>I'm sorry, it seems that movie wasn't in our database exactly. Please enter more info!</h4>
+        <br/>
         <h2 class="form-signin-heading">What is the movie you want to rate?</h2>
         {% if error %}
           <p class="error"><strong>Error:</strong> {{ error }}
         {% endif %}<br><br>
         <input type="text" class="input-block-level" placeholder="Movie name" name = "new_title">
-      <!--   <input type="password" class="input-block-level" placeholder="Password" name = "password">
-        <input type="text" class="input-block-level" placeholder="Occupation" name = "occupation">
-        <input type="text" class="input-block-level" placeholder="Optional: age" name = "age">
-        <input type="text" class="input-block-level" placeholder="Optional: gender" name = "gender">
-        <input type="text" class="input-block-level" placeholder="Optional: zipcode" name = "zipcode"> -->
-        <button class="btn btn-large btn-primary" type="submit">Check for movie!</button>
+        <input type="text" class="input-block-level" placeholder="Movie Release Date" name = "movie_release">
+        <input type="text" class="input-block-level" placeholder="Optional: Video Release Date" name = "video_release">
+        <input type="text" class="input-block-level" placeholder="IMDB URL" name = "imdb_url">
+        <input type="text" class="input-block-level" placeholder="Rating 1-5" name = "rating">
+        <button class="btn btn-large btn-primary" type="submit">Add Movie & Rating!</button>
       </form>
 
     </div> <!-- /container -->
